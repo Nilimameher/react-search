@@ -30,22 +30,7 @@ class App extends Component {
     this.setState({enter});
   };
   
-// update(e){
-//   this.setState({
-//     data: e.target.value
-//   });
-// }
-// cleara(){
-//   this.setState({
-//     data:''
-//   });
-//   ReactDOM.findDOMNode(this.refs.myText).focus();
-// }
-// dltfunc = (index) => {
-//   const empsupdatedlist = Object.assign([], this.state.empsArray); 
-//   empsupdatedlist.splice(index,1);
-//   this.setState({empsArray:empsupdatedlist});
-// }
+
   render() {
     return (
       <div className="Container">
@@ -53,55 +38,15 @@ class App extends Component {
        <Optionn value={this.state.enter} 
        onChange={this.updateData}
        options={cricketersName}/>
-      {/* <div className="example-config">
-                    Selected Value: {JSON.stringify(this.state.enter.value)}
-      </div> */}
+    
        <h2>some interesting facts about {JSON.stringify(this.state.enter.value)}</h2>
        <p>{this.state.enter.desc} </p>
 
        <img src={logo} width="150" height="80" />
-       {/* <img src={Ex} />  */}
-       {/* {projects.map((e, idx) => 
-        <ListOfProjects
-          photo={e.photo}
-          text={e.text}
-          key={idx} // <-- here
-          />
-      )} */}
-       
-        {/* <Bio></Bio> */}
+      
+    
       </div>
-      // <div>
-      //   <p>First react programming</p>
-      //   <input type="text" value={this.state.data} onChange={this.update.bind(this)} ref='myText'/>
-      //   <h2>{this.state.data}</h2>
-      //   <button onClick={this.cleara.bind(this)}>clear above</button>
-      //    <table>
-      //      <tbody>
-      //        {
-      //         this.state.empsArray.map((emp)=>{
-      //           return (<Emp nm={emp.nm} key={emp.id} deleteEvent={(this.dltfunc.bind(this))}>{emp.sal}</Emp>)
-      //         })
-      //        }
-
-
-      //      </tbody>
-      //    </table>
-      // </div>
-      // <Router>
-      // <div>
-      //   <h2>routing to home page</h2>
-      //   <ul>
-      //     <li><Link to={'/'}>homeee</Link></li>
-      //     <li><Link to={'/home'}>home</Link></li>
-      //   </ul>
-      //   <hr/>
-      //   <Switch>
-          
-      //     <Route exact path='/home' component={Home}/>
-      //   </Switch>
-      // </div>
-      // </Router>
+      
     );
   }
 }
